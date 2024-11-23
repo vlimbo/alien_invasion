@@ -9,6 +9,8 @@ class AlienInvasion:
         # Set the screen size of the game
         self.screen = pygame.display.set_mode((1200, 800))
         pygame.display.set_caption("Alien Invasion")
+        # Creating a clock to make sure we get consistent fps
+        self.clock = pygame.time.Clock() # Again this creates an object
 
         # Set background-color property
         self.bg_color = (230, 230, 230)
