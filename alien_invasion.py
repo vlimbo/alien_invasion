@@ -34,6 +34,8 @@ class AlienInvasion:
                 # This refers to the acutal key that was pressed using event.key
                 if event.key == pygame.K_RIGHT:
                     self.ship.rect.x += 1
+                elif event.key == pygame.K_LEFT:
+                    self.ship.rect.x -= 1
 
 
 
