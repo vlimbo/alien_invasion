@@ -11,12 +11,18 @@ class Ship:
         self.rect.midbottom = self.screen_rect.midbottom
         self.moving_right = False
         self.moving_left = False
+        self.settings = ai_game.settings
+        # Allowing us to use floats as ship speed
+        self.x = float(self.rect.x)
+
 
     def update(self):
         if self.moving_right:
-            self.rect.x += 1
+            self.x += self.settings.ship_speed
         if self.moving_left:
-            self.rect.x -= 1
+            self.x -= self.settings.ship_speed
+        # Updating the position of the ship on the screen
+        self.rect.x = self.x
 
     def blitme(self):
         self.screen.blit(self.image, self.rect)
